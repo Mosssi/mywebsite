@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project · The Git Guide</title><link rel="stylesheet" href="./styles/style.css"></head><body>
+
+<header>
+  <div class="container header-inner">
+    <div class="brand">The Git Guide</div>
+    <nav><ul class="nav-list"><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link active" href="project.html">Project</a></li><li><a class="nav-link" href="changes.html">Changes</a></li><li><a class="nav-link" href="branching.html">Branching</a></li><li><a class="nav-link" href="about.html">About Us</a></li></ul></nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Project</h1>
+  <img src="./images/project.svg" alt="">
+  <h2>Why remote repositories?</h2>
+  <ul>
+    <li>Backups & history in the cloud.</li>
+    <li>Team collaboration with branches, PRs, reviews.</li>
+    <li>Deployment & automation (e.g., GitHub Pages).</li>
+  </ul>
+  <h2>Create a GitHub repository</h2>
+  <ol>
+    <li>GitHub → New → name the repo (e.g., <code>git-guide</code>).</li>
+    <li>Choose Public/Private, optionally initialize with README.</li>
+    <li>Create repo and copy the HTTPS URL.</li>
+  </ol>
+  <h2>Create a local project & link to remote</h2>
+<pre><code>mkdir git-guide
+cd git-guide
+git init
+echo "# The Git Guide" > README.md
+git add .
+git commit -m "chore: init"
+git branch -M main
+git remote add origin https://github.com/&lt;org&gt;/&lt;repo&gt;.git
+git push -u origin main</code></pre>
+  <h2>How others can contribute</h2>
+<pre><code># clone the repo
+git clone https://github.com/&lt;org&gt;/&lt;repo&gt;.git
+cd repo
+# feature branch
+git checkout -b feature/&lt;name&gt;-task
+# work → stage → commit
+git add .
+git commit -m "feat: add X"
+# push & open PR to develop
+git push -u origin feature/&lt;name&gt;-task</code></pre>
+</main>
+
+<footer><div class="container">© 2025 The Git Guide · Responsive HTML & CSS (Flex, Grid, 1 media query)</div></footer>
+
+</body></html>

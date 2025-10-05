@@ -1,0 +1,163 @@
+*{
+    box-sizing:border-box;
+}
+html{
+    height:100vh;
+}
+
+body{
+    margin:0;
+    background-color:#282C33;
+}
+
+.menu{
+    padding:8px;
+}
+
+.menu__item{
+    color:#FFFFFF;;
+    border-radius:4px;
+    font-weight:bold;
+    margin:0 8px;
+    padding:4px;
+    text-transform:uppercase;
+}
+
+.menu__item:hover{
+    background-color:#C778DD;
+    color:#FFFFFF;
+}
+
+.menu__item:visited{
+    text-decoration:none;
+}
+
+
+.main-content{
+    color:#FFFFFF;
+    font-size:1rem;
+    padding:16px;
+    position:relative;
+}
+
+.flex-article{
+    display:flex;
+    flex-wrap:wrap;
+    gap:32px;
+    justify-content:space-between;
+}
+
+.article.box-article{
+    border:1px solid #C778DD;
+    border-radius:12px;
+    padding:12px;
+    flex: 0 0 calc(50% - 32px);   
+}
+
+.article__img{
+    border-radius:12px;
+    width:100%;
+    height:auto;
+    display: block;
+    margin-bottom:12px;
+}
+
+
+
+
+.header{
+    padding:24px 0;
+    text-align:center;
+    color:#FFFFFF; 
+}
+
+.header__title{
+    color:#FFFFFF;
+    font-size:4rem;
+    font-weight:bold;
+    margin:0;
+    text-align:center;
+}
+
+
+.main{
+     flex-grow:1;
+     padding:18px;
+     color:#FFFFFF;            
+}
+
+.user-information{
+    border-radius:12px;
+    margin-top:24px;
+    padding:16px;
+    margin-bottom:2vh;   
+}
+
+fieldset{
+    margin-top:32vh;
+    margin-bottom:32vh;
+    border-color:#C778DD;
+    margin-top:24px;
+    border-radius:12px;
+    margin-bottom:12vh;
+}
+
+.user-information{
+    margin-top:24px;
+}
+
+.user-input{
+    margin-bottom:8px;
+}
+
+.required::after{
+    content:r'*';
+    color:red;
+    border-radius:12px;
+    display:inline-block;
+    color:#FFFFFF;
+}
+
+textarea{
+    display:block;
+    width:90%;
+    height:100px;
+}
+
+.submit{
+    border-color:#C778DD;
+    border:1px;
+    border-radius:12px;
+    cursor:pointer;
+    padding:6px 12px;
+}
+
+.submit:hover{
+    background-color:#C778DD;
+    color:#FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    padding:24px;
+    text-align:center;
+    color:#FFFFFF;
+}

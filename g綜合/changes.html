@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changes · The Git Guide</title><link rel="stylesheet" href="./styles/style.css"></head>
+
+<body>
+<header>
+  <div class="container header-inner">
+    <div class="brand">The Git Guide</div>
+    <nav><ul class="nav-list"><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="project.html">Project</a></li><li><a class="nav-link active" href="changes.html">Changes</a></li><li><a class="nav-link" href="branching.html">Branching</a></li><li><a class="nav-link" href="about.html">About Us</a></li></ul></nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Changes — Daily Workflow</h1>
+  <img src="./images/changes.svg" alt="">
+  <h2>1) Pull latest base (develop)</h2>
+<pre><code>git checkout develop
+git pull</code></pre>
+  <h2>2) Create a feature branch</h2>
+<pre><code>git checkout -b feature/&lt;your-name&gt;-changes</code></pre>
+  <h2>3) Edit → Stage → Commit</h2>
+<pre><code>git status
+git add .
+git commit -m "feat: implement changes page"</code></pre>
+  
+<h2>4) Push & open PR → develop</h2>
+<pre><code>git push -u origin feature/&lt;your-name&gt;-changes</code></pre>
+  <div class="ok"><strong>PR tip:</strong> Title with type (feat/fix/docs), describe what & why, and add how-to-test + screenshots.</div>
+
+
+  
+  <h2>Keep your branch fresh</h2>
+
+
+<pre><code>git checkout develop && git pull
+git checkout feature/&lt;your-name&gt;-changes
+git merge develop
+# resolve conflicts:
+# edit files to keep the right content, remove conflict markers
+git add &lt;file&gt;
+git commit -m "chore: resolve merge conflict"
+git push</code></pre>
+
+
+  <h2>Common errors</h2>
+  <div class="note">
+    <p><strong>Push rejected:</strong> run <code>git pull</code>, resolve conflicts, then <code>git push</code>.</p>
+    
+    <p><strong>Cannot push to main:</strong> main may be protected; open a PR into <code>develop</code>.</p>
+    <p><strong>Committed on wrong branch:</strong> switch to the correct branch and redo your change there.</p>
+  </div>
+
+
+  <h2>Personal “9 actions” checklist</h2>
+  <ul>
+    <li>Create a feature branch</li>
+    <li>Make 2–3 small commits</li>
+    <li>Push the branch</li>
+    <li>Open a PR to <code>develop</code></li>
+    <li>Request reviews & respond</li>
+    <li>Merge into <code>develop</code></li>
+    <li>Review ≥3 teammates’ PRs</li>
+  </ul>
+
+  <h2>PR template (copy into your PR)</h2>
+<pre><code>## What & Why
+- ...
+
+## How to Test
+- ...
+
+## Screenshots
+- ...
+
+## Checklist
+- [ ] Self-reviewed
+- [ ] Mobile/Desktop checked
+- [ ] No unrelated changes</code></pre>
+</main>
+
+<footer><div class="container">© 2025 The Git Guide · Responsive HTML & CSS (Flex, Grid, 1 media query)</div></footer>
+
+</body></html>

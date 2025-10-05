@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Branching · The Git Guide</title><link rel="stylesheet" href="./styles/style.css"></head><body>
+
+<header>
+  <div class="container header-inner">
+    <div class="brand">The Git Guide</div>
+    <nav><ul class="nav-list"><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="project.html">Project</a></li><li><a class="nav-link" href="changes.html">Changes</a></li><li><a class="nav-link active" href="branching.html">Branching</a></li><li><a class="nav-link" href="about.html">About Us</a></li></ul></nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Branching</h1>
+  <img src="./images/branching.svg" alt="">
+  <h2>Why branching?</h2>
+  <ul>
+    <li>Isolate work; keep <code>main</code> stable.</li>
+    <li>Parallel development & safer reviews.</li>
+    <li>Typical flow: feature → <code>develop</code> → <code>main</code>.</li>
+  </ul>
+  <h2>Create & switch branches</h2>
+<pre><code>git branch                  # list
+git checkout -b feature/&lt;name&gt;-topic
+git checkout develop        # switch back</code></pre>
+  <h2>Push & PR</h2>
+<pre><code>git push -u origin feature/&lt;name&gt;-topic
+# open a PR to develop</code></pre>
+  <h2>Merge a branch</h2>
+<pre><code>git checkout develop
+git pull
+git merge feature/&lt;name&gt;-topic
+git push</code></pre>
+  <h2>Delete a branch (after merge)</h2>
+<pre><code>git branch -d feature/&lt;name&gt;-topic
+git push origin --delete feature/&lt;name&gt;-topic</code></pre>
+</main>
+
+<footer><div class="container">© 2025 The Git Guide · Responsive HTML & CSS (Flex, Grid, 1 media query)</div></footer>
+
+</body></html>

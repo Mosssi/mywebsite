@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniSite • Gallery</title>
+  <link rel="stylesheet" href="./styles/typography.css">
+  <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+<body>
+  
+<header class="header">
+  <div class="header__inner">
+    <div class="brand" role="banner" aria-label="Site brand">
+      <span>MiniSite</span><span class="brand__dot">•</span>
+    </div>
+    <nav aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link nav__link--active" href="gallery.html" aria-current="page">Gallery</a></li><li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="main">
+    <h1>Gallery</h1>
+    <p>Each image is responsive (width: 100%; height: auto;). Try resizing the window.</p>
+    <div class="grid grid--responsive">
+      <figure class="card">
+        <div class="card__media"><img src="./images/gallery-1.svg" alt="Abstract graphic 1" width="1400" height="800"></div>
+        <figcaption class="card__body">Caption 1</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card__media"><img src="./images/gallery-2.svg" alt="Abstract graphic 2" width="1400" height="800"></div>
+        <figcaption class="card__body">Caption 2</figcaption>
+      </figure>
+      <figure class="card">
+        <div class="card__media"><img src="./images/gallery-3.svg" alt="Abstract graphic 3" width="1400" height="800"></div>
+        <figcaption class="card__body">Caption 3</figcaption>
+      </figure>
+    </div>
+  </main>
+  
+<footer class="footer">
+  <div class="main">
+    <p>© 2025 MiniSite. Built for the multi‑page website assignment. Images are local SVG placeholders.</p>
+  </div>
+</footer>
+
+</body>
+</html>
