@@ -27,7 +27,7 @@ body{
 
 .menu{
     background-color:#ea097d;
-    padding: 8px;
+    padding: 80px;
 }
 
 .menu__item{
@@ -36,24 +36,28 @@ body{
     border-radius:4px;
     font-weight:bold;
     margin:0 8px;
-    padding:8px;
+    padding:12px;
     text-transform:uppercase;
 }
+
 .menu__item:hover{
     background-color:#f1eeff;
     color:aqua;
 }
 
-.menu__item:link,
 .menu__item:visited{
     text-decoration:none;
 }
 
+
+
+
+
+
 .main-content{ 
     font-size:0;
     padding:16px;
-    position:relative;
-    
+    position:relative;   
 }
 
 .flex-container{

@@ -1,0 +1,45 @@
+Git & GitHub — Steps Summary
+============================
+0) One-time setup
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global core.quotepath false
+
+1) Create local & link remote
+mkdir project && cd project
+git init
+echo "# Project" > README.md
+git add . && git commit -m "chore: init"
+git branch -M main
+git remote add origin https://github.com/<org>/<repo>.git
+git push -u origin main
+
+(Or clone: git clone https://github.com/<org>/<repo>.git && cd repo)
+
+2) Branch strategy
+- main: release
+- develop: integration
+- feature/...: task branch
+git checkout -b develop && git push -u origin develop
+
+3) Daily workflow
+git checkout develop && git pull
+git checkout -b feature/<name>-task
+# work →
+git add .
+git commit -m "feat: ..."
+git push -u origin feature/<name>-task
+# open PR to develop and request reviews
+
+4) Keep branch updated
+git checkout develop && git pull
+git checkout feature/<name>-task
+git merge develop
+# resolve → git add <file> && git commit -m "chore: resolve merge conflict" && git push
+
+5) Release to main
+git checkout main && git pull
+git merge develop && git push
+
+6) GitHub Pages
+Settings → Pages → Deploy from a branch → main / (root). Ensure index.html exists.
